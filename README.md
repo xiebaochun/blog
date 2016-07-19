@@ -1,7 +1,9 @@
 # gh-page blog system
 
 ### Description
+
 	This is a simple gh-pages blog system, you can take a glance at [Demo]: http://xiebaochun.github.io/blog  "gh-page blog Demo".
+
 ### Structure
 
 `
@@ -21,6 +23,7 @@
 - push.js ---- push current branch to the source branch
 - README.md ---- this is fuck me!
 - server.js ---- this the local dev service powered by express web engine
+
 `
 
 ## Usage
