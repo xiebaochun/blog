@@ -6,8 +6,7 @@
 
 ### Structure
 
-`
-+ /build ---- gh-pages static website
+`+ /build ---- gh-pages static website
 + /source ---- source files
 	- css ----style files
 	- js ---- script files
@@ -22,9 +21,7 @@
 - publish.js ----- deploy static files to the gh-page branch
 - push.js ---- push current branch to the source branch
 - README.md ---- this is fuck me!
-- server.js ---- this the local dev service powered by express web engine
-
-`
+- server.js ---- this the local dev service powered by express web engine`
 
 ## Usage
 
@@ -44,8 +41,7 @@
 
 ##### Article Format
 
-`
-\===
+`===
 {
     "title":"[post title]", title of the post
     "author":"xiebaochun", //the author of the post 
@@ -54,9 +50,7 @@
 }
 \===
 post main content
-bala bala ...
-
-`
+bala bala ...`
 ##### Backup source file
 `node push`
 
