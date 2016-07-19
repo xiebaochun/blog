@@ -41,7 +41,7 @@ npm install //If you use TAOBAO npm mirror type:cnpm install,will faster!
 
 ##### Article Format
 
-`===  
+``===  
 {  
     "title":"[post title]", title of the post  
     "author":"xiebaochun", //the author of the post   
@@ -51,7 +51,7 @@ npm install //If you use TAOBAO npm mirror type:cnpm install,will faster!
 ===  
 post main content  
 bala bala ...  
-`
+``
 ##### Backup source file
 `node push`
 
