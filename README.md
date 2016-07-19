@@ -4,7 +4,7 @@
 This is a simple gh-pages blog system, you can take a glance at [Demo](http://xiebaochun.github.io/blog).
 
 ### Structure
-
+	
 + /build ---- gh-pages static website
 + /source ---- source files
 	- css ----style files
