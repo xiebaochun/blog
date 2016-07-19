@@ -27,7 +27,7 @@ This is a simple gh-pages blog system, you can take a glance at [Demo](http://xi
 ### Ready
 	git clone  https://github.com/xiebaochun/blog.git  
 	cd blog  
-	npm install //If you use TAOBAO npm mirror type:cnpm install,will faster!  
+	npm install    //_If you use TAOBAO npm mirror type:cnpm install,will faster!_ 
 ### Generate static files
 	node build
 
