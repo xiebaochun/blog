@@ -40,7 +40,7 @@ node new [postname]
 `
 
 ##### Article Format
-`javasript
+`
 ===
 {
     "title":"[post title]", title of the post
