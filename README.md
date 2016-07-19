@@ -2,9 +2,8 @@
 
 ## Description
 
+### Structure
 `
-Structure
-
 + /build ---- gh-pages static website
 + /source ---- source files
 	- css ----style files
@@ -21,3 +20,43 @@ Structure
 - push.js ---- push current branch to the source branch
 - README.md ---- this is fuck me!
 - server.js ---- this the local dev service powered by express web engine
+`
+
+### Usage
+
+##### Ready
+`javascript
+git clone  https://github.com/xiebaochun/blog.git
+cd blog
+npm install //If you use TAOBAO npm mirror type:cnpm install,will faster!
+`
+##### Generate static files
+`javascript
+node build
+`
+##### New post
+`javascript
+node new [postname]
+`
+
+##### Article Format
+`javasript
+===
+{
+    "title":"[post title]", title of the post
+    "author":"xiebaochun", //the author of the post 
+    "categories":["web","react","angular"],  //categories of the post
+    "tags":["node.js","architecture"] // tags of the post
+}
+===
+post main content
+bala bala ...
+`
+##### Backup source file
+`javascript 
+node push
+`
+
+### Include
+If there are any question please contact with me by QQ or other awesome tools(such as the github issue area).
+
