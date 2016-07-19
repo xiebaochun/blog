@@ -35,8 +35,7 @@ npm install //If you use TAOBAO npm mirror type:cnpm install,will faster!
 `node build`
 
 ##### New post
-
-`node new [postname]`
+	node new [postname]
 
 ##### Article Format
 ===
