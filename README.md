@@ -40,17 +40,19 @@ npm install //If you use TAOBAO npm mirror type:cnpm install,will faster!
 
 ##### Article Format
 
-``===  
-{  
+
+`===`  
+`{  
     "title":"[post title]", title of the post  
     "author":"xiebaochun", //the author of the post   
     "categories":["web","react","angular"],  //categories of the post  
     "tags":["node.js","architecture"] // tags of the post  
 }   
-===  
-post main content  
-bala bala ...  
-``
+`===`  
+`post main content  
+bala bala ... ` 
+
+
 ##### Backup source file
 `node push`
 
