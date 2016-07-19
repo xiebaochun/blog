@@ -22,20 +22,20 @@
 - server.js ---- this the local dev service powered by express web engine
 `
 
-### Usage
+## Usage
 
 ##### Ready
-`javascript
+`
 git clone  https://github.com/xiebaochun/blog.git
 cd blog
 npm install //If you use TAOBAO npm mirror type:cnpm install,will faster!
 `
 ##### Generate static files
-`javascript
+`
 node build
 `
 ##### New post
-`javascript
+`
 node new [postname]
 `
 
@@ -53,10 +53,10 @@ post main content
 bala bala ...
 `
 ##### Backup source file
-`javascript 
+`
 node push
 `
 
-### Include
+## Include
 If there are any question please contact with me by QQ or other awesome tools(such as the github issue area).
 
