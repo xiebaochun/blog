@@ -2,7 +2,7 @@
 
 ### Description
 
-	This is a simple gh-pages blog system, you can take a glance at [Demo]: http://xiebaochun.github.io/blog  "gh-page blog Demo".
+	This is a simple gh-pages blog system, you can take a glance at [Demo](http://xiebaochun.github.io/blog).
 
 ### Structure
 
