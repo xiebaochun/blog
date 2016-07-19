@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>test</title>
+	<!-- <link rel="icon" href="/favicon.ico" type="/image/x-icon" />
+	<link rel="shortcut icon" href="/favicon.ico" type="/image/x-icon" /> -->
+	<meta name="keywords" content="xiebaochun,sunshine of micro,front-end,zstu,edu,zhejiang hangzhou" />
+	<meta name="description" content="xiebaochun's blog of front end technology" />
+	<link rel="stylesheet" type="text/css" href="../build/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../build/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="../build/css/index.css">
+</head>
+<body>
+<div class="wrap">
+	<div class="top-loader-bar" id="top-loader-bar"></div>
+	<h2>test</h2>
+</div>
+<script type="text/javascript" src="../build/js/common.js"></script>
+<script>
+	var $top_loader_bar = $('#top-loader-bar');
+	var $body = $('body');
+	console.log($top_loader_bar);
+	console.log($body);
+	//$('#top-loader-bar').dom.style.width  = '50%';
+	var step = 0;
+	var loader = setInterval(function(){
+		step ++;
+		$top_loader_bar._dom.style.width = step + '%';
+		if(step >= 100) {
+			clearInterval(loader);
+			$top_loader_bar._dom.style.width = 0;
+		}
+	},1);
+
+	$('body').on('click','body',function(){
+		console.log('post-list');
+	});	
+	$('body').on('click','h2',function(){
+		console.log(this);
+	});	
+	// $('article').on('click','',function(){});	
+</script>
+</body>
+</html>

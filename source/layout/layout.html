@@ -23,17 +23,18 @@
 </div>
 <script type="text/javascript" src="{$blogDirectory}/js/common.js"></script>
 <script>
-	console.log($('.top-loader-bar'));
+	var $top_loader_bar = $('#top-loader-bar');
+	var $body = $('body');
 	//$('#top-loader-bar').dom.style.width  = '50%';
 	var step = 0;
 	var loader = setInterval(function(){
 		step ++;
-		$('#top-loader-bar').dom.style.width = step + '%';
+		$top_loader_bar._dom.style.width = step + '%';
 		if(step >= 100) {
 			clearInterval(loader);
-			$('#top-loader-bar').dom.style.width = 0;
+			$top_loader_bar._dom.style.width = 0;
 		}
-	},1);
+	},1);	
 </script>
 </body>
 </html>
