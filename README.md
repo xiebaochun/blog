@@ -1,9 +1,9 @@
 # gh-page blog system
 
-### Description
+## Description
 This is a simple gh-pages blog system, you can take a glance at [Demo](http://xiebaochun.github.io/blog).
 
-### Structure
+## Structure
 	
 + /build ---- gh-pages static website
 + /source ---- source files
@@ -24,17 +24,17 @@ This is a simple gh-pages blog system, you can take a glance at [Demo](http://xi
 
 ## Usage
 
-##### Ready
+### Ready
 	git clone  https://github.com/xiebaochun/blog.git  
 	cd blog  
 	npm install //If you use TAOBAO npm mirror type:cnpm install,will faster!  
-##### Generate static files
+### Generate static files
 	node build
 
-##### New post
+### New post
 	node new [postname]
 
-##### Article Format
+### Article Format
 	===
 	{  
     	"title":"[post title]", title of the post  
@@ -46,7 +46,7 @@ This is a simple gh-pages blog system, you can take a glance at [Demo](http://xi
 	post main content  
 	bala bala ... 
 
-##### Backup source file
+### Backup source file
 	node push
 
 ## Include
