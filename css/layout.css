@@ -27,12 +27,17 @@ aside > .cate-txt{
 	display: block;
 	line-height: 50px;
 	color:#666;
-	background-color: #fcfcfc;
+	_background-color: #fcfcfc;
 	border-bottom: 1px solid #dfdfdf;
+	border-top:2px solid #5cb85c;
+	background: -webkit-linear-gradient(#eee, #fff);
+	background: -ms-linear-gradient(#eee, #fff);
+	background: linear-gradient(#eee, #fff);
 	text-align: center;
 }
 aside>ul{
  display: block; 
+
 }
 aside>ul>li{
 	display: block;
@@ -52,6 +57,10 @@ aside>ul>li:hover a{
 aside>ul>li>a{
 	display: block;
 	color:#999;
+}
+aside .friends-link{
+	margin-top: 50px;
+	
 }
 article{
 	display: inline-block;
