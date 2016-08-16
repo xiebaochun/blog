@@ -192,13 +192,15 @@ function buildByRemarkable(){
 	}
 
 	function buildIndex(postList){
-		var postListHtml = '';
+		// var postListHtml = '';
 		
-		for(var index = 0;index<postList.length;index++){
-			postListHtml += '<li><a href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a></li>';
-		}
+		// for(var index = 0;index<postList.length;index++){
+		// 	postListHtml += '<li><a href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a></li>';
+		// }
 
-		postListHtml = '<h2>文章</h2><ul class="post-list">' + postListHtml + '</ul>';
+		// postListHtml = '<h2>文章</h2><ul class="post-list">' + postListHtml + '</ul>';
+
+		var postListHtml = generatePostListHtml(postList);
 
 		var html = layout(postListHtml,'index');
 
@@ -211,15 +213,17 @@ function buildByRemarkable(){
 		//console.log(categoriesPostList);
 		for(var item in categoriesPostList){
 			//console.log('>>>>>>'+ typeof item);
-			var postListHtml = '';
+			// var postListHtml = '';
 
-			var postList = categoriesPostList[item];
+			// var postList = categoriesPostList[item];
 			
-			for(var index = 0;index<postList.length;index++){
-				postListHtml += '<li><a href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a></li>';
-			}
+			// for(var index = 0;index<postList.length;index++){
+			// 	postListHtml += '<li><a href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a></li>';
+			// }
 
-			postListHtml = '<h2>文章</h2><ul class="post-list">' + postListHtml + '</ul>';
+			// postListHtml = '<h2>文章</h2><ul class="post-list">' + postListHtml + '</ul>';
+
+			var postListHtml = generatePostListHtml(categoriesPostList[item]);
 
 			var html = layout(postListHtml,(item ||'No title'));
 
@@ -227,6 +231,18 @@ function buildByRemarkable(){
 				'./build/categories-'+item+'.html',html);
 			console.log('file categories html write success!');
 		}
+	}
+
+	function generatePostListHtml(postList){
+		var postListHtml = '';
+		
+		for(var index = 0;index<postList.length;index++){
+			postListHtml += '<li><span class="post-cate">'+(postList[index].info.categories||'sdf')+'</span><a href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a></li>';
+		}
+
+		postListHtml = '<h2>文章</h2><ul class="post-list">' + postListHtml + '</ul>';
+
+		return postListHtml;
 	}
 }
 
