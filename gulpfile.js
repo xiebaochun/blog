@@ -7,8 +7,8 @@ var server = require('./server');
 // var filter = require('gulp-filter');
 
 gulp.task('start',function(){
-	gulp.run('watch');
 	gulp.run('server');
+	gulp.run('watch');
 });
 
 gulp.task('watch',function(){
@@ -22,7 +22,7 @@ gulp.task('watch',function(){
     //     .pipe(watch('source/views/css/**/*.css'))
     //     .pipe(changeF)
     //     .pipe(gulp.dest('build'));
-    gulp.watch(['./source/**/*.{html,md,css,js}'], ['build']);
+    gulp.watch(['./source/**/*.{html,md,css,js}','./build.js'], ['build']);
   
 });
 

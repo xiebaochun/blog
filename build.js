@@ -15,6 +15,7 @@ function build(_isDev){
 	if(!isDev){
 		_blogDirectory = '/blog';
 	}
+	exec('rm -r ./build/*');
 	exec('cp -r ./source/css ./build');
 	exec('cp -r ./source/js ./build');
 	buildByRemarkable();
@@ -197,7 +198,7 @@ function buildByRemarkable(){
 			postListHtml += '<li><a href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a></li>';
 		}
 
-		postListHtml = '<h2>Articles</h2><ul class="post-list">' + postListHtml + '</ul>';
+		postListHtml = '<h2>文章</h2><ul class="post-list">' + postListHtml + '</ul>';
 
 		var html = layout(postListHtml,'index');
 
@@ -218,7 +219,7 @@ function buildByRemarkable(){
 				postListHtml += '<li><a href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a></li>';
 			}
 
-			postListHtml = '<h2>Articles</h2><ul class="post-list">' + postListHtml + '</ul>';
+			postListHtml = '<h2>文章</h2><ul class="post-list">' + postListHtml + '</ul>';
 
 			var html = layout(postListHtml,(item ||'No title'));
 
