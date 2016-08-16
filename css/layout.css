@@ -1,3 +1,6 @@
+*{
+	transition: all 0.2s;
+}
 .wrap{
 	width: 100%;
 	min-width: 1000px;
@@ -6,6 +9,13 @@ header{
 	height:60px;
 	background-color: #f3f3f3;
 	border-bottom: 1px solid #ddd;
+	background-image: url(http://zjuhpp.com/wp-content/themes/hpp/images/banner/index.jpg);
+	background-size: cover;
+	background-position: 50% 65%;
+}
+header .front{
+	background-color:rgba(240,240,240,0.9);
+
 }
 .top-loader-bar{
 	position: fixed;
@@ -51,7 +61,10 @@ aside>ul>li{
 }
 aside>ul>li:hover a{
 	color:#666;
+	color:#5cb85c;
+	font-weight: 700;
 	background-color: #fcfcfc;
+	background-color: #f1fff1;
 	text-decoration:none;
 }
 aside>ul>li>a{
@@ -74,7 +87,9 @@ article{
 	padding-left: 30px;
 	line-height: 60px;
 	color:#999;
-	font-family: '仿宋'
+	font-family: '仿宋';
+	font-style: italic;
+	text-shadow: 1px 1px 3px #999;
 }
 
 .post-list > li{																												;
