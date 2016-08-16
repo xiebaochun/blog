@@ -1,9 +1,15 @@
 var gulp = require('gulp');
 
+var server = require('./server');
+
 // var watch = require('gulp-watch');
 
 // var filter = require('gulp-filter');
 
+gulp.task('start',function(){
+	gulp.run('watch');
+	gulp.run('server');
+});
 
 gulp.task('watch',function(){
 	// watch('source/views/css/**/*.css', function (cb) {
@@ -18,6 +24,10 @@ gulp.task('watch',function(){
     //     .pipe(gulp.dest('build'));
     gulp.watch(['./source/**/*.{html,md,css,js}'], ['build']);
   
+});
+
+gulp.task('server',function(){
+	server();
 });
 
 gulp.task('build',function(){
