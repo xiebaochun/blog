@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>webpack介绍及使用-sunshine of micro</title>
+	<link rel="icon" href="/favicon.ico" type="/image/x-icon" />
+	<link rel="shortcut icon" href="/favicon.ico" type="/image/x-icon" />
+	<meta name="keywords" content="xiebaochun,sunshine of micro,front-end,zstu,edu,zhejiang hangzhou" />
+	<meta name="description" content="xiebaochun's blog of front end technology" />
+	<link rel="stylesheet" type="text/css" href="/blog/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/blog/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/blog/css/index.css">
+</head>
+<body>
+<div class="wrap">
+	<header>
+	<div class="top-loader-bar" id="top-loader-bar"></div>
+	<div>
+		<a style="display:inline-block;line-height:60px;" href="/blog/index.html"><span class="title">微个日光日</span></a>
+	</div>
+</header>
+	<aside>
+    <span class="cate-txt">分类</span> 
+	<ul>
+		<!-- <li>web</li>
+		<li>android</li>
+		<li>ios</li>
+		<li>life</li>
+		<li>game</li>
+		<li>book</li>
+		<li>php</li> -->
+		<li><a href="/blog/categories-生活.html">生活</a></li><li><a href="/blog/categories-前端.html">前端</a></li>
+	</ul>
+</aside><article>
+		<div class="markdown-body">
+			<h1>webpack介绍及使用</h1>
+<h3>webpack到底是啥？</h3>
+<p>官方定义：<strong>webpack</strong> is a <strong>module bundler</strong> (webpack是一个模块打包工具)。</p>
+<p><em>官方给出如下图所示的说明</em></p>
+<p><img src="https://webpack.github.io/assets/what-is-webpack.png" alt=""></p>
+<p>给人第一的印象是：智能加载相互依赖的模块并打包成对应的静态资源。</p>
+<p>似乎还没说清楚。</p>
+<p><strong>前端模块加载的那些事儿</strong></p>
+<p>随着前端项目越来越复杂（尤其是大型SPA），以及命名空间混乱，一系列模块加载器随之而生。</p>
+<p>Javascript模块标准有：AMD 和 CommonJS <em>(有同学可能会跳出来说，不对，还有一个CMD)</em></p>
+<p>最有名的加载器有：RequireJS、SeaJS <em>(CMD规范，好吧，<a href="https://github.com/lifesinger">射雕</a>YY出来滴，其实还是属于CommonJS标准)</em> 、Bowserify</p>
+<p><strong>为什么还要再搞一个？</strong></p>
+<p>webpack是这样抱怨的：</p>
+<p>现有的模块加载器，不能很好适配大型项目（大型单页面应用程序）开发。开发这样一款加载器最大原因，就是为了代码分离以及静态资源模块化无缝接合。尽管尝试去拓展现有的模块加载器，但最后发现不可能完成所有功能目标。</p>
+<p>webpack的伟大理想是:</p>
+<ul>
+<li>分离现有依赖树，按需加载</li>
+<li>高效保证第一次加载</li>
+<li>静态资源模块化</li>
+<li>第三方库模块化加载</li>
+<li>实现加载器几乎所有环节可配置性</li>
+<li>适配大项目开发</li>
+</ul>
+<h3>webpack有哪些吊炸天特性？</h3>
+<p><strong>代码分离</strong></p>
+<p>Webpack有两种依赖声明方式：同步与异步。异步方式，将依赖分割成多个节点，然后每个节点形成一个新的文件块。经过优化后的文件块树，会以一个个文件形式分发出去（仅仅打包成一个大文件形式是很低效的）。</p>
+<p><strong>加载器插件</strong></p>
+<p>原生的Webpack只能处理JS文件，使用加载器插件，可以将其他资源专为JS资源。通过这种方式来加载，每一种资源都可以被Webpack看作是一个模块来加载。</p>
+<p><strong>智能模块解析</strong></p>
+<p>Webpack内置一个智能加载模块，可以用于处理几乎所有的第三方库。它甚至可以解析依赖声明的表达式，比如 require(&quot;./templates&quot; + name + &quot;.jade&quot;)。Webpack会处理最常见的JS模块标准：CommonJS 和 AMD。</p>
+<p><strong>插件系统</strong></p>
+<p>Webpack的最大特点，就是配套了非常丰富的插件系统。大部分内置特性功能都是基于这套插件系统。它可以让你根据需要自定义Webpack，将一般插件作为开源项目发布出去。</p>
+<h2>webpack的安装</h2>
+<p><strong>通过NPM包管理器：</strong></p>
+<pre><code class="language-js">npm install -g webpack
+</code></pre>
+<p>项目中初始化Webpack</p>
+<p>最优的方式就是，在项目中声明Webpack依赖。通过声明依赖，可以选择一个本地的Webpack版本，而不需要使用全局声明的版本。</p>
+<p>添加一个npm 配置文件package.json：</p>
+<p>npm init
+然后需要回答一系列问题。如果希望把自己项目发布到npm上面，这些问题的回答非常重要。（如果不需要的话，一直回车就好啦）</p>
+<p>安装webpack、添加依赖到package.json</p>
+<pre><code class="language-js">npm install webpack --save-dev
+</code></pre>
+<p>其中--save-dev就是声明在开发阶段需要用到webpack，并且自动把webpack依赖写到package.json配置文件上面，生产环境就不需要安装（上生产环境时候，webpack已经把项目打包好啦，不需要它老人家出马了）</p>
+<h2>总结</h2>
+<p>似乎还没弄清楚？确实，webpack在实践中的复杂度还是比较高的，但是多理论实践双剑合璧的话，相信您很快就会掌握其博大精深的奥秘。</p>
+<script>								var idcomments_acct = '1d91760ed815800e7c6d113414d302cf';								var idcomments_post_id;								var idcomments_post_url;								</script>								<span id="IDCommentsPostTitle" style="display:none"></span>								<script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>	
+		</div>
+	</article>
+	<footer>
+	<span class="copy-right">© 2016 微个日光日, Inc.</span>
+</footer>	
+</div>
+<script type="text/javascript" src="/blog/js/common.js"></script>
+<script>
+	var $top_loader_bar = $('#top-loader-bar');
+	var $body = $('body');
+	//$('#top-loader-bar').dom.style.width  = '50%';
+	var step = 0;
+	var loader = setInterval(function(){
+		step ++;
+		$top_loader_bar._dom.style.width = step + '%';
+		if(step >= 100) {
+			clearInterval(loader);
+			$top_loader_bar._dom.style.width = 0;
+		}
+	},1);	
+</script>
+</body>
+</html>

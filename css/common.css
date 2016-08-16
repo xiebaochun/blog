@@ -682,7 +682,7 @@ pre {
 }
 
 .markdown-body img {
-	max-width: 100%;
+	max-width: 60%;
 	box-sizing: content-box;
 	background-color: #fff
 }
