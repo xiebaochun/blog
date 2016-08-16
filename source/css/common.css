@@ -1,6 +1,6 @@
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 html {
-	font-family: sans-serif;
+	font-family: '仿宋', sans-serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%
 }
@@ -682,7 +682,7 @@ pre {
 }
 
 .markdown-body img {
-	max-width: 100%;
+	max-width: 60%;
 	box-sizing: content-box;
 	background-color: #fff
 }
