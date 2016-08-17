@@ -237,7 +237,11 @@ function buildByRemarkable(){
 		var postListHtml = '';
 		
 		for(var index = 0;index<postList.length;index++){
-			postListHtml += '<li><span class="post-cate">'+(postList[index].info.categories||'sdf')+'</span><a href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a></li>';
+			postListHtml += '<li>\
+								<span class="post-cate">'+(postList[index].info.categories||'')+'</span>\
+								<a href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a>\
+								<span class="create-time">'+(postList[index].info.createtime||'')+'</span>\
+							</li>';
 		}
 
 		postListHtml = '<h2>文章</h2><ul class="post-list">' + postListHtml + '</ul>';

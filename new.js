@@ -30,7 +30,8 @@ var initPostText = '===\n\
     "title":"'+postName+'",\n\
     "author":"xiebaochun",\n\
     "categories":["'+cates+'"],\n\
-    "tags":[""]\n\
+    "tags":[""],\n\
+    "createtime":"'+date.toLocaleDateString()+'"\n\
 }\n\
 ===\n\
 # '+postName+'\n\

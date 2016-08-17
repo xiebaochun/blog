@@ -92,7 +92,8 @@ article{
 	text-shadow: 1px 1px 3px #999;
 }
 
-.post-list > li{																												;
+.post-list > li{	
+	position: relative;																											;
 	list-style: none;
 	border-bottom: 1px solid #eee;
 }
@@ -111,6 +112,16 @@ article{
 	padding:3px 7px;
 	background-color: #80bd01;
 	vertical-align: middle;
+}
+.post-list > li > .create-time{
+	display: inline-block;
+	position: absolute;
+	right:0;
+	bottom:0;
+	padding:0 5px;
+	color:#999;
+	background-color: #eee;
+	font-size:12px;
 }
 .post-list > li > a{
 	display: inline-block;
