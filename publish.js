@@ -19,5 +19,6 @@ function out(argument) {
 	// body...
 	cd('..');
 	exec('gulp build');
+	exec('node push');
 	exit(1);
 }
