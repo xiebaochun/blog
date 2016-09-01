@@ -80,6 +80,7 @@ function buildByRemarkable(){
 
 	var categoriesPostList = {};
 
+	getCate('./source/posts');
 	render('./source/posts');
 
 	buildIndex(postList);
@@ -111,10 +112,25 @@ function buildByRemarkable(){
 		categories = uniqueArray(categories);
 	}
 
-	function render(dir){
+	function getCate(dir){
 		var files = fs.readdirSync(dir);
 
 		getCategories(files,dir);
+
+		for(file in files){
+
+			var file_name = files[file];
+
+			if(fs.statSync(dir +'/'+ file_name).isDirectory()){
+				getCate(dir +'/'+ file_name);
+			}
+		}
+	}
+
+	function render(dir){
+		var files = fs.readdirSync(dir);
+
+		//getCategories(files,dir);
 
 		for(file in files){
 
