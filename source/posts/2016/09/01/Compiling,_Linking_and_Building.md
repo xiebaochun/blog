@@ -114,7 +114,5 @@ GCC C和C++编译器分别对应gcc和g++。
 
 编译/链接简单的c程序 hello.c
 下面
-
-
 Translate From:  
 [http://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html](http://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html)
