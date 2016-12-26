@@ -1,0 +1,146 @@
+*{
+	transition: all 0.2s;
+}
+.wrap{
+	width: 100%;
+	min-width: 1000px;
+}
+header{
+	height:60px;
+	background-color: #f3f3f3;
+	border-bottom: 1px solid #ddd;
+	background-image: url(http://zjuhpp.com/wp-content/themes/hpp/images/banner/index.jpg);
+	background-size: cover;
+	background-position: 50% 65%;
+}
+header .front{
+	background-color:rgba(240,240,240,0.9);
+
+}
+.top-loader-bar{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 0;
+	height: 2px;
+	background-color: #77b6ff;
+	box-shadow:0 0 10px rgba(119,182,255,0.7);
+}
+aside{
+	display: inline-block;
+	width:15%;
+	min-width: 150px;
+	_border-top:5px solid #eee;
+	vertical-align: top;
+}
+aside > .cate-txt{
+	display: block;
+	line-height: 50px;
+	color:#666;
+	_background-color: #fcfcfc;
+	border-bottom: 1px solid #dfdfdf;
+	border-top:2px solid #5cb85c;
+	background: -webkit-linear-gradient(#eee, #fff);
+	background: -ms-linear-gradient(#eee, #fff);
+	background: linear-gradient(#eee, #fff);
+	text-align: center;
+}
+aside>ul{
+ display: block; 
+
+}
+aside>ul>li{
+	display: block;
+	line-height: 35px;
+	background-color: #fefefe;
+	font-size:14px;
+	color:#999;
+	border-bottom: 1px solid #eee;
+	text-align: center;
+	cursor:pointer;
+}
+aside>ul>li:hover a{
+	color:#666;
+	color:#5cb85c;
+	font-weight: 700;
+	background-color: #fcfcfc;
+	background-color: #f1fff1;
+	text-decoration:none;
+}
+aside>ul>li>a{
+	display: block;
+	color:#999;
+}
+aside .friends-link{
+	margin-top: 50px;
+	
+}
+article{
+	display: inline-block;
+	width:85%;
+	min-width: 850px;
+	min-height: 700px;
+	padding:20px 20px;
+	border-left:1px solid #eee;
+}
+.title{
+	padding-left: 30px;
+	line-height: 60px;
+	color:#999;
+	font-family: '仿宋';
+	font-style: italic;
+	text-shadow: 1px 1px 3px #999;
+}
+
+.post-list > li{	
+	position: relative;																											;
+	list-style: none;
+	border-bottom: 1px solid #eee;
+}
+.post-list > li .post-cate{
+	border-radius: 3px;
+	color:#999;
+	font-size:12px;
+	padding:3px 7px;
+	background-color: #e5e5e5;
+	vertical-align: middle;
+}
+.post-list > li .post-jinghua{
+	border-radius: 3px;
+	color:#fff;
+	font-size:12px;
+	padding:3px 7px;
+	background-color: #80bd01;
+	vertical-align: middle;
+}
+.post-list > li > .create-time{
+	display: inline-block;
+	position: absolute;
+	right:0;
+	bottom:0;
+	padding:0 5px;
+	color:#999;
+	background-color: #eee;
+	font-size:12px;
+}
+.post-list > li > a{
+	display: inline-block;
+	padding:10px 0  10px 5px;	
+	color:#666;
+	text-decoration: none;
+	vertical-align: middle;
+}
+.post-list > li > a:hover{
+	color:#666;
+	text-decoration: underline;
+}
+footer{
+	height:50px;
+	background-color: #eeeeee;
+}
+.copy-right{
+	padding-left:30px;
+	font-size:12px;
+	color:#ccc;
+	line-height: 50px;
+}

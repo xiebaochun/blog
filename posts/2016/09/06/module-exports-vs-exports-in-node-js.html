@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>module-exports-vs-exports-in-node-js-sunshine of micro</title>
+	<link rel="icon" href="/favicon.ico" type="/image/x-icon" />
+	<link rel="shortcut icon" href="/favicon.ico" type="/image/x-icon" />
+	<meta name="keywords" content="xiebaochun,sunshine of micro,front-end,zstu,edu,zhejiang hangzhou" />
+	<meta name="description" content="xiebaochun's blog of front end technology" />
+	<link rel="stylesheet" type="text/css" href="/blog/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/blog/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/blog/css/index.css">
+</head>
+<body>
+<div class="wrap">
+	<header>
+	<div class="top-loader-bar" id="top-loader-bar"></div>
+	<div class="front">
+		<a style="display:inline-block;line-height:60px;" href="/blog/index.html"><span class="title">微个日光日's blog</span></a>
+	</div>
+</header>
+	<aside>
+    <span class="cate-txt">分类</span> 
+	<ul>
+		<!-- <li>web</li>
+		<li>android</li>
+		<li>ios</li>
+		<li>life</li>
+		<li>game</li>
+		<li>book</li>
+		<li>php</li> -->
+		<li><a href="/blog/categories-生活.html">生活</a></li><li><a href="/blog/categories-.html"></a></li><li><a href="/blog/categories-前端.html">前端</a></li><li><a href="/blog/categories-计算机.html">计算机</a></li>
+	</ul>
+	<span class="cate-txt friends-link">友情链接</span> 
+	<ul>
+		<li><a target="_blank" href="http://zjuhpp.com/">韩小麦</a></li>
+		<li><a target="_blank" href="http://www.zhangxinxu.com/">张鑫旭</a></li>
+		<li><a target="_blank" href="https://github.com/lifesinger/blog/issues">王保平</a></li>
+		<li><a target="_blank" href="https://www.byvoid.com/">郭家宝</a></li>
+		<li><a target="_blank" href="http://diveintonode.org/">田永强</a></li>
+		<li><a target="_blank" href="https://github.com/astaxie">谢孟军</a></li>
+		<li><a target="_blank" href="http://www.laruence.com">惠新宸</a></li>
+		<li><a target="_blank" href="http://www.ruanyifeng.com">阮一峰</a></li>
+		<li><a target="_blank" href="http://www.cnblogs.com/rubylouvre/">钟钦成</a></li>
+		<li><a target="_blank" href="http://winter-cn.cnblogs.com/">程劭非</a></li>
+		<li><a target="_blank" href="http://evanyou.me">尤雨溪</a></li>
+	</ul>
+</aside><article>
+		<div class="markdown-body">
+			<h1>module-exports-vs-exports-in-node-js</h1>
+<p>You can imagine that at very begining of your file there is something like (just for explanation):</p>
+<pre><code>var module = new Module(...);
+var exports = module.exports;
+</code></pre>
+<p><img src="http://i.stack.imgur.com/JzZkz.png" alt=""></p>
+<p>So whatever you do just keep in mind that module.exports and NOT exports will be returned from your module when you requiring that module from somewhere else.</p>
+<p>So when you do something like:</p>
+<pre><code>exports.a = function() {
+    console.log(&quot;a&quot;);
+}
+exports.b = function() {
+    console.log(&quot;b&quot;);
+}
+</code></pre>
+<p>You are adding 2 function 'a' and 'b' to the object on which module.exports points too, so typeof returning result will be an object : <code>{ a: [Function], b: [Function] }</code></p>
+<p>Of course this is the same result you will get if you are using module.exports in this example instead of exports.</p>
+<p>This is the case where you want your module.exports to behave like container of exported values. In the case where you only want to export a constructor function, what you will do? (Remember again that module.exports will be returned when you required something, not export).</p>
+<pre><code>module.exports = function Something() {
+    console.log('bla bla');
+}
+</code></pre>
+<p>Now typeof returning result is 'function' and you can required it and immediately invoke like:
+var x = require('./file1.js')(); because you overwrite the returning result to be an function.</p>
+<p>Why in this case you can't use something like:</p>
+<pre><code>exports = function Something() {
+    console.log('bla bla');
+}
+</code></pre>
+<p>Because with this exports reference doesn't 'point' anymore to the object where module.exports points, so there is not a relationship between exports and module.exports anymore. In this case module.exports still points to the empty object {} which will be returned.</p>
+<p>Accepted answer from another topic should also help: <a href="http://stackoverflow.com/questions/13104494/does-javascript-pass-by-reference">'Does JavaScript pass by reference?'</a></p>
+<script>								var idcomments_acct = '1d91760ed815800e7c6d113414d302cf';								var idcomments_post_id;								var idcomments_post_url;								</script>								<span id="IDCommentsPostTitle" style="display:none"></span>								<script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>	
+		</div>
+	</article>
+	<footer>
+	<span class="copy-right">© 2016 微个日光日, Inc.</span>
+</footer>	
+</div>
+<script type="text/javascript" src="/blog/js/common.js"></script>
+<!--百度统计-->
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?c1a4fe488e28c685f3d2b18671221525";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+ <!--百度统计end-->
+<script>
+	var $top_loader_bar = $('#top-loader-bar');
+	var $body = $('body');
+	//$('#top-loader-bar').dom.style.width  = '50%';
+	var step = 0;
+	var loader = setInterval(function(){
+		step ++;
+		$top_loader_bar._dom.style.width = step + '%';
+		if(step >= 100) {
+			clearInterval(loader);
+			$top_loader_bar._dom.style.width = 0;
+		}
+	},1);	
+</script>
+</body>
+</html>
