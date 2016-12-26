@@ -17,9 +17,9 @@ function publish(){
 		echo(`Error: Git push gh-pages failed`);
 		exec(`git init`);
 		exec(`git remote add origin https://xiebaochun:dandan520@github.com/xiebaochun/blog.git`);
-		
+		exec(`git checkout -b gh-pages`);
 		publish();
-		
+
 		out();
 	}
 }
