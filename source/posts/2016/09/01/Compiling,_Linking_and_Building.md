@@ -113,6 +113,6 @@ col需要带上退格（-b）。（如果是Cygwin，此命令在"Utils","util-l
 GCC C和C++编译器分别对应gcc和g++。
 
 编译/链接简单的c程序 hello.c
-下面
+下面   
 Translate From:  
 [http://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html](http://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html)
