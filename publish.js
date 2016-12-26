@@ -10,7 +10,7 @@ publish();
 function publish(){
 	exec('git add .');
 	if(exec('git commit -m "update"').code !== 0){
-		echo(`Error: Git commit gh-pages failed`);
+		echo(`Error: Git commit gh-pages failed-------------------------`);
 	    out();
 	}
 	if (exec(`git push origin gh-pages`).code !== 0) {
