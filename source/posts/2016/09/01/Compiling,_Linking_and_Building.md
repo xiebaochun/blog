@@ -89,6 +89,32 @@ Cygwin安装了两个版本的GCC，分别是gcc-3.exe和gcc-4.exe(g++-3.exe和g
 	Thread model: win32
 	gcc version 4.6.2 (GCC)
 
+#### 帮助
+你可以通过--help选项获取帮助手册，例如：
+	> gcc --help
+
+#### 手册页面
+你可以通过手册工具阅读GCC的页面：
+	> man gcc
+	// or
+	> man g++
+	// Press space key for next page, or 'q' to quit
+
+在CMD或者Bash阅读手册页面比较麻烦。你可以通过如下命令生成文本文件进行查看：
+	> man gcc | col -b > gcc.txt
+
+col需要带上退格（-b）。（如果是Cygwin，此命令在"Utils","util-linux"包中。）
+另外，你也可以查看在线手册，网址：[http://linux.die.net/man/1/gcc](http://linux.die.net/man/1/gcc.)
+
+如果是MinGW,GCC的文档在“share\man\man1\gcc.1"目录下。如果是Cygwin，则在”usr\share\man\man1".
+
+### 1.3 准备
+
+GCC C和C++编译器分别对应gcc和g++。
+
+编译/链接简单的c程序 hello.c
+下面
+
 
 Translate From:  
 [http://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html](http://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html)
