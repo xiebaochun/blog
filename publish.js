@@ -24,9 +24,9 @@ function publish(){
 
 		out();
 	}
+	echo(`------------ gh-pages updated`);
+	out();
 }
-echo(`------------ gh-pages updated`);
-out();
 
 function out(argument) {
 	// body...
