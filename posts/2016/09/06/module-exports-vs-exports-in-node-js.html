@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>hello 世界。-sunshine of micro</title>
+	<title>module-exports-vs-exports-in-node-js-sunshine of micro</title>
 	<link rel="icon" href="/favicon.ico" type="/image/x-icon" />
 	<link rel="shortcut icon" href="/favicon.ico" type="/image/x-icon" />
 	<meta name="keywords" content="xiebaochun,sunshine of micro,front-end,zstu,edu,zhejiang hangzhou" />
@@ -47,8 +47,37 @@
 	</ul>
 </aside><article>
 		<div class="markdown-body">
-			<h1>hello 世界。</h1>
-<p>你好，世界！</p>
+			<h1>module-exports-vs-exports-in-node-js</h1>
+<p>You can imagine that at very begining of your file there is something like (just for explanation):</p>
+<pre><code>var module = new Module(...);
+var exports = module.exports;
+</code></pre>
+<p><img src="http://i.stack.imgur.com/JzZkz.png" alt=""></p>
+<p>So whatever you do just keep in mind that module.exports and NOT exports will be returned from your module when you requiring that module from somewhere else.</p>
+<p>So when you do something like:</p>
+<pre><code>exports.a = function() {
+    console.log(&quot;a&quot;);
+}
+exports.b = function() {
+    console.log(&quot;b&quot;);
+}
+</code></pre>
+<p>You are adding 2 function 'a' and 'b' to the object on which module.exports points too, so typeof returning result will be an object : <code>{ a: [Function], b: [Function] }</code></p>
+<p>Of course this is the same result you will get if you are using module.exports in this example instead of exports.</p>
+<p>This is the case where you want your module.exports to behave like container of exported values. In the case where you only want to export a constructor function, what you will do? (Remember again that module.exports will be returned when you required something, not export).</p>
+<pre><code>module.exports = function Something() {
+    console.log('bla bla');
+}
+</code></pre>
+<p>Now typeof returning result is 'function' and you can required it and immediately invoke like:
+var x = require('./file1.js')(); because you overwrite the returning result to be an function.</p>
+<p>Why in this case you can't use something like:</p>
+<pre><code>exports = function Something() {
+    console.log('bla bla');
+}
+</code></pre>
+<p>Because with this exports reference doesn't 'point' anymore to the object where module.exports points, so there is not a relationship between exports and module.exports anymore. In this case module.exports still points to the empty object {} which will be returned.</p>
+<p>Accepted answer from another topic should also help: <a href="http://stackoverflow.com/questions/13104494/does-javascript-pass-by-reference">'Does JavaScript pass by reference?'</a></p>
 <script>								var idcomments_acct = '1d91760ed815800e7c6d113414d302cf';								var idcomments_post_id;								var idcomments_post_url;								</script>								<span id="IDCommentsPostTitle" style="display:none"></span>								<script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>	
 		</div>
 	</article>

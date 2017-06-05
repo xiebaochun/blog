@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>hello 世界。-sunshine of micro</title>
+	<title>enabling the gb library in php setting-sunshine of micro</title>
 	<link rel="icon" href="/favicon.ico" type="/image/x-icon" />
 	<link rel="shortcut icon" href="/favicon.ico" type="/image/x-icon" />
 	<meta name="keywords" content="xiebaochun,sunshine of micro,front-end,zstu,edu,zhejiang hangzhou" />
@@ -47,8 +47,45 @@
 	</ul>
 </aside><article>
 		<div class="markdown-body">
-			<h1>hello 世界。</h1>
-<p>你好，世界！</p>
+			<h1>在PHP中开启GD模块设置</h1>
+<p>在PHP服务中，很多功能都需要启用GD库来实现。比如你需要GD库在网站的某些地方来显示图形验证码。</p>
+<p>PHP默认安装，是已经启用了GD库的。</p>
+<p>如果你的PHP服务并没有启用GD库，下面就介绍一下如何来启用它。</p>
+<h4>首先，怎么判断GD开启了呢？</h4>
+<p>你可以在你的php服务器里新建一个简单的phpinfo页面来查看GD库是否已经启用。</p>
+<p>1.创建一个名为phpinfo.php的文件。</p>
+<p>2.用Notepad打开这个文件，或者用你喜欢的WYSIWYG编辑器，比如Dreamweaver,sublime text等。</p>
+<p>3.在文件中添加如下代码：</p>
+<p>`</p>
+<?php
+    phpinfo();
+?>
+ `
+<p>4.在本地的web服务器中保存你的文件。</p>
+<p>5.打开浏览器，如Firefox/chrome 或者 Internet Explorer。</p>
+<p>6.在地址栏中，输入这个文件的url地址。
+通常，在你本地的测试服务器中，这个url是http://localhost/phpinfo.php.</p>
+<p>7.如果GD库可用的话，结果页面中应该会显示如下部分。</p>
+<p><img src="http://www.webassist.com/community/tutorials/attachments/120/427/var/www/vhosts/webassist.com/user_uploads/tutorials/attachments/120/427/proportion/gd_02_w634_h400/gd_02_09250649.png" alt=""></p>
+<p>如果你没有看到上面这部分，请参考PHP帮助文档的步骤来安装GD库。</p>
+<p><a href="http://us2.php.net/manual/en/image.installation.php">http://us2.php.net/manual/en/image.installation.php</a></p>
+<h3>下面是安装GD的一些例子。</h3>
+<h4>Window服务器</h4>
+<p>1.用Nodepad打开你的PHP.ini文件，或者其他WYSIWYG编辑器。
+此文件通常位于C:\Windows\目录下</p>
+<p>2.找到如下这行。</p>
+<p><code>;extension=php_gd2.dll</code></p>
+<p>3.移除前面的分号(;)来启用这个配置项。</p>
+<p>4.保存这个文件。</p>
+<p>5.重启web服务器。</p>
+<h4>Ubuntu Linux</h4>
+<p>1.运行如下命令行安装GD库:</p>
+<p><code>sudo apt-get install php5-gd</code></p>
+<p>2.重启Apache服务器。</p>
+<h4>Mac OSX</h4>
+<p>对于苹果用户来说，一旦安装好了PHP,要想启用GD库的话，就没有那么简单的解决方案了。然而，我们推荐使用MAMP套件，你可以通过如下链接来获取。</p>
+<p><a href="http://www.mamp.info/en/downloads/index.html">http://www.mamp.info/en/downloads/index.html</a></p>
+<p>使用MAMP，你可以安装Apache，Mysql和PHP来进行本地网站测试。</p>
 <script>								var idcomments_acct = '1d91760ed815800e7c6d113414d302cf';								var idcomments_post_id;								var idcomments_post_url;								</script>								<span id="IDCommentsPostTitle" style="display:none"></span>								<script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>	
 		</div>
 	</article>
