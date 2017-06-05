@@ -1,6 +1,6 @@
 ===
 {
-    "title":"enabling the gb library in php setting",
+    "title":"在PHP服务中开启GD模块设置",
     "author":"xiebaochun",
     "categories":["php"],
     "tags":["php","gd"],
