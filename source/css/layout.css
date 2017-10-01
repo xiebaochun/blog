@@ -148,6 +148,12 @@ footer{
 	.wrap{
 		min-width: 0;
 	}
+	header .front{
+		text-align: center;
+	}
+	header .front .title{
+		padding-left: 0 !important;
+	}
 	aside{
 		display: none;
 	}
@@ -183,5 +189,9 @@ footer{
 	}
 	.markdown-body h5{
 		font-size: 1em;
+	}
+	footer{text-align: center;}
+	footer span{
+		padding-left: 0 !important;
 	}
 }
