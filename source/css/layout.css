@@ -157,4 +157,19 @@ footer{
 		padding:10px;
 		border:none;
 	}
+	.markdown-body ul, .markdown-body ol{
+		padding-left: 0;
+	}
+	.post-list > li > a{
+		width: 67%;
+		white-space: nowrap;
+		overflow-y: hidden;
+		text-overflow: ellipsis;
+	}
+	.markdown-body h1{
+		font-size: 1.8em;
+	}
+	.markdown-body h4{
+		font-size: 1.2em;
+	}
 }
