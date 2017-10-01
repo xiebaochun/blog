@@ -154,5 +154,7 @@ footer{
 	article{
 		width: 100%;
 		min-width: 0;
+		padding:10px;
+		border:none;
 	}
 }
