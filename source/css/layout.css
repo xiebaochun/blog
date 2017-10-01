@@ -166,6 +166,9 @@ footer{
 		overflow-y: hidden;
 		text-overflow: ellipsis;
 	}
+	.markdown-body img{
+		max-width: 100%;
+	}
 	.markdown-body h1{
 		font-size: 1.8em;
 	}
