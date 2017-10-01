@@ -169,7 +169,16 @@ footer{
 	.markdown-body h1{
 		font-size: 1.8em;
 	}
+	.markdown-body h2{
+		font-size: 1.6em;
+	}
+	.markdown-body h3{
+		font-size: 1.4em;
+	}
 	.markdown-body h4{
 		font-size: 1.2em;
+	}
+	.markdown-body h5{
+		font-size: 1em;
 	}
 }
