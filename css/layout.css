@@ -144,3 +144,54 @@ footer{
 	color:#ccc;
 	line-height: 50px;
 }
+@media screen and (max-width: 600px){
+	.wrap{
+		min-width: 0;
+	}
+	header .front{
+		text-align: center;
+	}
+	header .front .title{
+		padding-left: 0 !important;
+	}
+	aside{
+		display: none;
+	}
+	article{
+		width: 100%;
+		min-width: 0;
+		padding:10px;
+		border:none;
+	}
+	.markdown-body ul, .markdown-body ol{
+		padding-left: 0;
+	}
+	.post-list > li > a{
+		width: 67%;
+		white-space: nowrap;
+		overflow-y: hidden;
+		text-overflow: ellipsis;
+	}
+	.markdown-body img{
+		max-width: 100%;
+	}
+	.markdown-body h1{
+		font-size: 1.8em;
+	}
+	.markdown-body h2{
+		font-size: 1.6em;
+	}
+	.markdown-body h3{
+		font-size: 1.4em;
+	}
+	.markdown-body h4{
+		font-size: 1.2em;
+	}
+	.markdown-body h5{
+		font-size: 1em;
+	}
+	footer{text-align: center;}
+	footer span{
+		padding-left: 0 !important;
+	}
+}

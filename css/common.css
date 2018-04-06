@@ -2038,6 +2038,9 @@ label {
 	white-space: nowrap !important
 }
 
+/*溢出省略*/
+.nowrap{display: block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+
 .vertical-middle {
 	vertical-align: middle !important
 }
