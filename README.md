@@ -49,6 +49,9 @@ This is a simple gh-pages blog system, you can take a glance at [Online demo](ht
 ### Backup source file
 	node push
 
+### publish blog
+	node publish(It contains backup task)
+
 ## Include
 If there are any question please contact with me by QQ or other awesome tools(such as the github issue area).
 
