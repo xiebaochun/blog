@@ -2,7 +2,7 @@
 {
     "title":"module-exports-vs-exports-in-node-js",
     "author":"xiebaochun",
-    "categories":[""],
+    "categories":["前端"],
     "tags":[""],
     "createtime":"2016-09-06"
 }
