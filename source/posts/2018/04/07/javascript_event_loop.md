@@ -8,3 +8,7 @@
 }
 ===
 # javascript事件循环机制
+
+
+## reference
+http://altitudelabs.com/blog/what-is-the-javascript-event-loop/
